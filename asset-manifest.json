@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/imxhunter/static/js/main.77d36003.chunk.js",
-    "main.js.map": "/imxhunter/static/js/main.77d36003.chunk.js.map",
+    "main.js": "/imxhunter/static/js/main.5816e52a.chunk.js",
+    "main.js.map": "/imxhunter/static/js/main.5816e52a.chunk.js.map",
     "runtime-main.js": "/imxhunter/static/js/runtime-main.faa003b4.js",
     "runtime-main.js.map": "/imxhunter/static/js/runtime-main.faa003b4.js.map",
     "static/js/2.63e7813f.chunk.js": "/imxhunter/static/js/2.63e7813f.chunk.js",
@@ -13,6 +13,6 @@
   "entrypoints": [
     "static/js/runtime-main.faa003b4.js",
     "static/js/2.63e7813f.chunk.js",
-    "static/js/main.77d36003.chunk.js"
+    "static/js/main.5816e52a.chunk.js"
   ]
 }
