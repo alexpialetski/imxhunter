@@ -1,0 +1,50 @@
+import { CollectionStats } from "types";
+
+export const BookGamesStats: CollectionStats = {
+  tokenAddress: "0xac98d8d1bb27a94e79fbf49198210240688bb1ed",
+  tokenCount: 124960,
+  getTokenUrl: (orderRarity) =>
+    `https://tokentrove.com/collection/BookGames/imx-${orderRarity.imxId}`,
+  tokenProperties: {
+    Attribute: {
+      Accountability: { count: 12100, rarity: "9.68" },
+      Tenacity: { count: 6608, rarity: "5.29" },
+      Curiosity: { count: 13022, rarity: "10.42" },
+      Patience: { count: 12563, rarity: "10.05" },
+      Humility: { count: 12099, rarity: "9.68" },
+      Special: { count: 970, rarity: "0.78" },
+      "Self-awareness": { count: 11983, rarity: "9.59" },
+      Optimism: { count: 12561, rarity: "10.05" },
+      "Kind Candor": { count: 7724, rarity: "6.18" },
+      Kindness: { count: 8340, rarity: "6.67" },
+      Ambition: { count: 7684, rarity: "6.15" },
+      Empathy: { count: 16517, rarity: "13.22" },
+      Conviction: { count: 1395, rarity: "1.12" },
+      Gratitude: { count: 1394, rarity: "1.12" },
+    },
+    Spectacular: {
+      Lava: { count: 41517, rarity: "33.22" },
+      Diamond: { count: 20251, rarity: "16.21" },
+      Gold: { count: 24390, rarity: "19.52" },
+      "Bubble Gum": { count: 28956, rarity: "23.17" },
+      Hologram: { count: 9846, rarity: "7.88" },
+    },
+    "Token Frame": {
+      Marble: { count: 10394, rarity: "8.32" },
+      Pearl: { count: 2599, rarity: "2.08" },
+      Black: { count: 11696, rarity: "9.36" },
+      Clear: { count: 13972, rarity: "11.18" },
+      Granite: { count: 8775, rarity: "7.02" },
+      Emerald: { count: 3249, rarity: "2.60" },
+      Gold: { count: 12995, rarity: "10.40" },
+      Caviar: { count: 6498, rarity: "5.20" },
+      Rainbow: { count: 4875, rarity: "3.90" },
+      Silver: { count: 16243, rarity: "13.00" },
+      Champagne: { count: 650, rarity: "0.52" },
+      Fur: { count: 8123, rarity: "6.50" },
+      Wood: { count: 17095, rarity: "13.68" },
+      Galaxy: { count: 5846, rarity: "4.68" },
+      Neon: { count: 1950, rarity: "1.56" },
+    },
+  },
+};
