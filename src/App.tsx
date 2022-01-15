@@ -21,7 +21,7 @@ export const App: React.FC = () => (
       <Dashboard>
         <Switch>
           <Route exact path="/:collection?">
-            <Redirect to={getAppUrl("bookgames", "calculator")} />
+            <Redirect to={getAppUrl("bookgames", "priceToRarity")} />
           </Route>
           {Array.from(COLLECTION_TO_ROUTES.entries()).map(
             ([collectionSlug, collectionStats]) => (
