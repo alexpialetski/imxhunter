@@ -17,16 +17,16 @@ export type OrderChartProps = {
     order: OrderVO,
     collectionStats: CollectionStats
   ) => (token: TokenVO) => OrderRarity;
-  maxRange?: number;
 };
+
+const SLIDER_MAX = 50;
 
 export const OrderChart: React.FC<OrderChartProps> = ({
   collectionStats,
   coefCalculator,
-  maxRange = 100,
 }) => {
-  const [rarityRange, setRarirityRange] = useState([0, maxRange]);
-  const [pageSize, setPageSize] = useState(100);
+  const [showRange, setShowRange] = useState(SLIDER_MAX);
+  const [pageSize, setPageSize] = useState(10);
   const [orders, setResponse] = useState<OrderRarity[]>([]);
   const [cursor, setCursor] = useState<string>();
   const [currentCursor, setCurrentCursor] = useState<string>();
@@ -76,7 +76,7 @@ export const OrderChart: React.FC<OrderChartProps> = ({
   };
 
   const onRarityRangeChange: SliderProps["onChange"] = (_, newValue) =>
-    Array.isArray(newValue) && setRarirityRange(newValue);
+    !Array.isArray(newValue) && setShowRange(newValue);
 
   const handleNextClick = () => setCursor(currentCursor);
 
@@ -88,12 +88,8 @@ export const OrderChart: React.FC<OrderChartProps> = ({
   };
 
   const filteredOrders = useMemo<OrderRarity[]>(
-    () =>
-      orders.filter(
-        (order) =>
-          order.rarity < rarityRange[1] && order.rarity > rarityRange[0]
-      ),
-    [orders, rarityRange]
+    () => orders.sort((a, b) => b.rarity - a.rarity).slice(0, showRange),
+    [orders, showRange]
   );
 
   if (!orders.length) {
@@ -114,8 +110,8 @@ export const OrderChart: React.FC<OrderChartProps> = ({
         />
         <Slider
           getAriaLabel={() => "Coef Range"}
-          value={rarityRange}
-          max={maxRange}
+          value={showRange}
+          max={SLIDER_MAX}
           onChange={onRarityRangeChange}
           valueLabelDisplay="auto"
         />

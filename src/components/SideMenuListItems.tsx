@@ -4,7 +4,6 @@ import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import BarChart from "@mui/icons-material/BarChart";
 import PieChart from "@mui/icons-material/PieChart";
 import Calculator from "@mui/icons-material/Calculate";
 import ListSubheader from "@mui/material/ListSubheader";
@@ -29,13 +28,8 @@ export const LINKS: Map<
     },
     [
       {
-        path: `/bookgames/rarity`,
-        text: "Order Rarity",
-        Icon: <BarChart />,
-      },
-      {
         path: `/bookgames/priceToRarity`,
-        text: "Rarity To Price",
+        text: "Deal hunter",
         Icon: <PieChart />,
       },
       {

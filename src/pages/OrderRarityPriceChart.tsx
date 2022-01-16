@@ -10,10 +10,4 @@ export type OrderRarityPriceChartProps = {
 
 export const OrderRarityPriceChart: React.FC<OrderRarityPriceChartProps> = (
   props
-) => (
-  <OrderChart
-    {...props}
-    maxRange={100}
-    coefCalculator={mapToOrderRarityPrice}
-  />
-);
+) => <OrderChart {...props} coefCalculator={mapToOrderRarityPrice} />;

@@ -1,3 +1,3 @@
 export type CollectionSlug = "bookgames";
 
-export type PageSlug = "rarity" | "priceToRarity" | "calculator";
+export type PageSlug = "priceToRarity" | "calculator";

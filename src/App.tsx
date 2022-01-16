@@ -4,7 +4,7 @@ import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 
 import { theme } from "constants/theme";
 import { Dashboard } from "components/Dashboard";
-import { OrderRarityChart, OrderRarityPriceChart, Calculator } from "pages";
+import { OrderRarityPriceChart, Calculator } from "pages";
 import { CollectionSlug, CollectionStats, PageSlug } from "types";
 import { BookGamesStats } from "constants/bookGamesStats";
 
@@ -26,9 +26,6 @@ export const App: React.FC = () => (
           {Array.from(COLLECTION_TO_ROUTES.entries()).map(
             ([collectionSlug, collectionStats]) => (
               <React.Fragment key={collectionSlug}>
-                <Route exact path={getAppUrl(collectionSlug, "rarity")}>
-                  <OrderRarityChart collectionStats={collectionStats} />
-                </Route>
                 <Route exact path={getAppUrl(collectionSlug, "priceToRarity")}>
                   <OrderRarityPriceChart collectionStats={collectionStats} />
                 </Route>
