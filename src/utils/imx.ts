@@ -53,6 +53,6 @@ export const mapToOrderRarityPrice =
     return {
       cost: cost,
       imxId: order.order_id,
-      rarity: (cost * 1000) / rarity,
+      rarity: (1000 - cost * 1000) / rarity,
     };
   };
